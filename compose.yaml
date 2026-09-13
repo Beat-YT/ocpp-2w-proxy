@@ -5,6 +5,6 @@ services:
     ports:
       - 8321:8321
     environment:
-      - TZ=Europe/Copenhagen
+      - TZ=America/New_York
     command: [ "python", "ocpp-2w-proxy.py"]
 
