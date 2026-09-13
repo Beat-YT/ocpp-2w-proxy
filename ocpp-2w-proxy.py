@@ -78,11 +78,6 @@ class OCPP2WProxy:
         self.ws = websocket
         self.charger_id = charger_id
 
-        # Chech that charger id looks reasonable
-        if not charger_id.isalnum():
-            logger.error(f"Charger ID '{charger_id}' is not alphanumeric")
-            raise Exception("Charger ID is not alphanumeric")
-
         # Initialize table of CSMS call ids sent to the charger in order to respond back 
         self.primary_call_ids = set()
         self.secondary_call_ids = set()
